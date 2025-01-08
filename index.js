@@ -83,8 +83,9 @@ function App() {
                 </div>
             </div>
             <div className="col-6">
-                <h2>單一產品細節</h2>
-                <div className="card border w-100">
+            <h2>單一產品細節</h2>
+                {tempProduct.title ?
+                (<div className="card border w-100">
                     <img src={tempProduct.imgUrl}className="card-img-top"
                         alt={tempProduct.title} />
                     <div className="card-body">
@@ -93,7 +94,7 @@ function App() {
                         </h5>
                         <p className="card-text">商品描述：{tempProduct.description}</p>
                         <p className="card-text">商品內容：{tempProduct.content}</p>
-                        <p className="card-text"><del class="text-secondary">{tempProduct.originPrice}</del> 元 / {tempProduct.price} 元</p>
+                        <p className="card-text"><del className="text-secondary">{tempProduct.originPrice}</del> 元 / {tempProduct.price} 元</p>
                         <h5>更多圖片：</h5>
                         <div className="d-flex">
                         {tempProduct.moreImgUrl?.map((url,index)=>(
@@ -101,7 +102,8 @@ function App() {
                         )}
                         </div>
                     </div>
-                </div>
+                </div>)
+                :(<h4 className="text-secondary">請選擇一個商品查看</h4>)}
             </div>
         </div>
     </div>
