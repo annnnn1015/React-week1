@@ -24,7 +24,7 @@ function App() {
             content:"尺寸：6寸",
             originPrice:"1000",
             price:"900",
-            isEnabled:true,
+            isEnabled:false,
             imgUrl:"https://images.unsplash.com/photo-1627834377411-8da5f4f09de8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1001&q=80",
             moreImgUrl:[
                 "https://images.unsplash.com/photo-1618888007540-2bdead974bbb?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=987&q=80",
@@ -70,7 +70,7 @@ function App() {
                                 <td>{item.title}</td>
                                 <td>{item.originPrice}</td>
                                 <td>{item.price}</td>
-                                <td>{item.isEnabled}</td>
+                                <td>{item.isEnabled ? '啟用':'未啟用'}</td>
                                 <td>
                                     <button type="button" className="btn btn-primary"
                                     onClick={()=>{setTempProduct(item)}}
